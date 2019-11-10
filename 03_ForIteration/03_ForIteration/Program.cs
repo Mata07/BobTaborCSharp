@@ -12,7 +12,14 @@ namespace _03_ForIteration
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(i);
+                //Console.WriteLine(i);
+                if (i == 7)
+                {
+                    Console.WriteLine("Found Seven!");
+                    // Breaks out of the loop when index seven is found
+                    break;
+                }
+
             }
             Console.ReadLine();
         }
