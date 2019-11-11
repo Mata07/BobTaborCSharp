@@ -18,9 +18,13 @@ namespace _03_ForIteration
                     Console.WriteLine("Found Seven!");
                     // Breaks out of the loop when index seven is found
                     break;
-                }
-
+                }                
             }
+
+            for (int myValue = 0; myValue < 12; myValue++)
+                {
+                    Console.WriteLine(myValue);
+                }
             Console.ReadLine();
         }
     }
