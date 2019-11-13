@@ -22,8 +22,8 @@ namespace WhileIteration
         {
             Console.Clear();
             Console.WriteLine("Choose an option: ");
-            Console.WriteLine("1) Option 1");
-            Console.WriteLine("2) Option 2");
+            Console.WriteLine("1) Print numbers");
+            Console.WriteLine("2) Guessing game");
             Console.WriteLine("3) Exit");
             string result = Console.ReadLine();
 
@@ -69,6 +69,34 @@ namespace WhileIteration
         {
             Console.Clear();
             Console.WriteLine("Guessing game!");
+
+            // myRandom number from Random class
+            Random myRandom = new Random();
+
+            // Get a random number beetween 1 and 10
+            int randomNumber = myRandom.Next(1, 11);
+
+            // counter for how many guesses Player had untill right number
+            int guesses = 0;
+            bool incorrect = true;
+
+            // do while - so that it runs at least one time
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10: ");
+                string result = Console.ReadLine();
+                guesses++;
+
+                // if entered number is equal to randomNumber
+                // change incorrect to false and break out of do while
+                if (result == randomNumber.ToString())
+                    incorrect = false;
+                else
+                    Console.WriteLine("Wrong");             
+
+            } while (incorrect);
+            Console.WriteLine("Correct! It took you {0} guesses.", guesses);
+
             Console.ReadLine();
         }
     }
