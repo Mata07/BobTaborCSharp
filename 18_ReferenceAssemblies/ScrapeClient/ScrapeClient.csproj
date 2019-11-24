@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScrapeLibrary\ScrapeLibrary.csproj">
+      <Project>{02b68855-d9ce-402e-a08b-390c22c68549}</Project>
+      <Name>ScrapeLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
